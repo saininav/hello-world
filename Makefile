@@ -1,15 +1,23 @@
-C      = gcc
-override CFLAGS	+= -v -g
+# Compiler
+CC ?= gcc
+
+# Compiler flags
+CFLAGS ?= -Wall -Wextra -g
+
 RM      = rm -f
 
+# Source file
+SRC = hello-world.c
 
-default: all
+# Executable name
+EXEC = hello-world
 
-all: Test
+#default: all
 
-Test: hello-world.c
-	$(CC) $(CFLAGS) -o hello-world hello-world.c
+all: $(EXEC)
+
+$(EXEC): $(SRC)
+	$(CC) $(CFLAGS) -o $(EXEC) $(SRC)
 
 clean:
-	$(RM) hello-world
-
+	$(RM) $(EXEC)
