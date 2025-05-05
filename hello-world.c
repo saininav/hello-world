@@ -2,6 +2,6 @@
 
 int main()
 {
-	printf("\n!! Hello Open-Embedded Core World !!\n");
+	printf("\n!! Hello Yocto Project World !!\n");
 	return 0;
 }
